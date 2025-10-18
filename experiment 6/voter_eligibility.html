@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q6d - Voter Eligibility</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        td, th {
+            border: 1px solid black;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Voter Eligibility Check</h2>
+
+    <script>
+        let name = prompt("Enter your name:");
+        let age = prompt("Enter your age:");
+        let status = (Number(age) >= 18) ? "Eligible to vote" : "Not eligible to vote";
+
+        document.write("<table>");
+        document.write("<tr><th>Name</th><th>Age</th><th>Status</th></tr>");
+        document.write("<tr><td>" + name + "</td><td>" + age + "</td><td>" + status + "</td></tr>");
+        document.write("</table>");
+    </script>
+
+</body>
+</html>

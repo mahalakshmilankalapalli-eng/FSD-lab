@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q6c - JS Input</title>
+</head>
+<body>
+
+    <h2>JavaScript Input Methods</h2>
+
+    <button onclick="getPromptInput()">Prompt Input</button>
+    <br><br>
+    <input type="text" id="textInput" placeholder="Type something">
+    <button onclick="getTextInput()">Get Input from Textbox</button>
+    <p id="display"></p>
+
+    <script>
+        function getPromptInput() {
+            let name = prompt("Enter your name:");
+            document.getElementById("display").innerText = "Prompt Input: " + name;
+        }
+
+        function getTextInput() {
+            let value = document.getElementById("textInput").value;
+            document.getElementById("display").innerText = "Textbox Input: " + value;
+        }
+    </script>
+
+</body>
+</html>
