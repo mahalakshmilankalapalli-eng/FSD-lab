@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q8d - Object Iteration</title>
+</head>
+<body>
+    <h2>Looping Over Object</h2>
+    <script>
+        let person = {
+            name: "John",
+            age: 30,
+            city: "New York"
+        };
+
+        document.write("<h3>Using for-in:</h3>");
+        for (let key in person) {
+            document.write(key + ": " + person[key] + "<br>");
+        }
+
+        let fruits = ["Apple", "Banana", "Cherry"];
+
+        document.write("<h3>Using forEach:</h3>");
+        fruits.forEach(function(item, index) {
+            document.write(index + ": " + item + "<br>");
+        });
+
+        document.write("<h3>Using for-of:</h3>");
+        for (let fruit of fruits) {
+            document.write(fruit + "<br>");
+        }
+    </script>
+</body>
+</html>

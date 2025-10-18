@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q8a - Largest of Three</title>
+</head>
+<body>
+    <h2>Find Largest of Three Numbers</h2>
+    <script>
+        let a = parseInt(prompt("Enter first number:"));
+        let b = parseInt(prompt("Enter second number:"));
+        let c = parseInt(prompt("Enter third number:"));
+        let message = "";
+
+        if (a === b && b === c) {
+            message = "EQUAL NUMBERS";
+        } else {
+            let largest = Math.max(a, b, c);
+            message = largest + " LARGER NUMBER";
+        }
+
+        document.write("<h3>" + message + "</h3>");
+    </script>
+</body>
+</html>

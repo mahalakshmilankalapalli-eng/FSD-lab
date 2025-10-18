@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q8f - Bank Denomination</title>
+</head>
+<body>
+    <h2>Bank Denomination Calculator</h2>
+    <script>
+        let amount = parseInt(prompt("Enter amount to deposit:"));
+        let denominations = [100, 50, 20, 10, 5, 2, 1];
+
+        denominations.forEach(function(denom) {
+            let count = Math.floor(amount / denom);
+            if (count > 0) {
+                document.write(count + " - " + denom + "'s<br>");
+                amount %= denom;
+            }
+        });
+    </script>
+</body>
+</html>
