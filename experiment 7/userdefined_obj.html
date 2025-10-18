@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q7h - User-defined Object</title>
+</head>
+<body>
+
+    <h2>User-defined Object Example</h2>
+
+    <script>
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+
+            this.details = function () {
+                return this.name + " is " + this.age + " years old.";
+            };
+
+            Object.defineProperty(this, 'info', {
+                get: function () {
+                    return this.name.toUpperCase() + " (" + this.age + ")";
+                }
+            });
+        }
+
+        let user = new Person("Alice", 25);
+
+        document.write("Using Method: " + user.details() + "<br>");
+        document.write("Using Accessor: " + user.info);
+    </script>
+
+</body>
+</html>

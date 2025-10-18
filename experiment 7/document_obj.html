@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q7a - Document Object</title>
+</head>
+<body>
+
+    <h2>Document Object Example</h2>
+    <p id="info"></p>
+
+    <script>
+        let info = "Title: " + document.title + "<br>";
+        info += "URL: " + document.URL + "<br>";
+        info += "Last Modified: " + document.lastModified + "<br>";
+        document.getElementById("info").innerHTML = info;
+    </script>
+
+</body>
+</html>
