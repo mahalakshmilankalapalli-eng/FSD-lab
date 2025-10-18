@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q9b - Number Functions with Buttons</title>
+</head>
+<body>
+    <h2>Enter a Number and Click a Button</h2>
+    <input type="number" id="numInput" placeholder="Enter number">
+    <br><br>
+    <button onclick="showFactorial()">Factorial</button>
+    <button onclick="showFibonacci()">Fibonacci</button>
+    <button onclick="showPrimes()">Prime</button>
+    <button onclick="showPalindrome()">Palindrome</button>
+    <p id="result"></p>
+
+    <script>
+        function getInput() {
+            return parseInt(document.getElementById("numInput").value);
+        }
+
+        function showFactorial() {
+            let n = getInput();
+            let fact = 1;
+            for (let i = 2; i <= n; i++) fact *= i;
+            document.getElementById("result").innerText = "Factorial: " + fact;
+        }
+
+        function showFibonacci() {
+            let n = getInput();
+            let fib = [0, 1];
+            for (let i = 2; i <= n; i++) fib[i] = fib[i - 1] + fib[i - 2];
+            document.getElementById("result").innerText = "Fibonacci: " + fib.slice(0, n + 1).join(", ");
+        }
+
+        function showPrimes() {
+            let n = getInput();
+            let primes = [];
+            for (let i = 2; i <= n; i++) {
+                let isPrime = true;
+                for (let j = 2; j <= Math.sqrt(i); j++) {
+                    if (i % j === 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+                if (isPrime) primes.push(i);
+            }
+            document.getElementById("result").innerText = "Primes: " + primes.join(", ");
+        }
+
+        function showPalindrome() {
+            let n = getInput();
+            let str = n.toString();
+            let isPal = str === str.split("").reverse().join("");
+            document.getElementById("result").innerText = "Palindrome: " + (isPal ? "Yes" : "No");
+        }
+    </script>
+</body>
+</html>

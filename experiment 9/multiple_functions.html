@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q9a - Functions for Number Operations</title>
+</head>
+<body>
+    <h2>Functions: Factorial, Fibonacci, Prime, Palindrome</h2>
+    <script>
+        function factorial(n) {
+            let fact = 1;
+            for (let i = 2; i <= n; i++) fact *= i;
+            return fact;
+        }
+
+        function fibonacci(n) {
+            let fib = [0, 1];
+            for (let i = 2; i <= n; i++) {
+                fib[i] = fib[i - 1] + fib[i - 2];
+            }
+            return fib.slice(0, n + 1);
+        }
+
+        function primesUpTo(n) {
+            let primes = [];
+            for (let i = 2; i <= n; i++) {
+                let isPrime = true;
+                for (let j = 2; j <= Math.sqrt(i); j++) {
+                    if (i % j === 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+                if (isPrime) primes.push(i);
+            }
+            return primes;
+        }
+
+        function isPalindrome(n) {
+            let str = n.toString();
+            return str === str.split("").reverse().join("");
+        }
+
+        let number = parseInt(prompt("Enter a number:"));
+        document.write("Factorial: " + factorial(number) + "<br>");
+        document.write("Fibonacci: " + fibonacci(number).join(", ") + "<br>");
+        document.write("Primes: " + primesUpTo(number).join(", ") + "<br>");
+        document.write("Palindrome: " + (isPalindrome(number) ? "Yes" : "No"));
+    </script>
+</body>
+</html>
