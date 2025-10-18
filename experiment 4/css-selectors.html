@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q4 - CSS Selector Forms</title>
+    <style>
+        h1 {
+            color: darkblue;
+        }
+
+        #main-title {
+            font-size: 28px;
+        }
+
+        .highlight {
+            background-color: yellow;
+        }
+
+        p, span {
+            color: darkgreen;
+        }
+
+        * {
+            font-family: Arial, sans-serif;
+        }
+
+        div p {
+            color: navy;
+        }
+
+        div > ul {
+            border: 1px solid gray;
+        }
+
+        h2 + p {
+            color: red;
+        }
+
+        h3 ~ p {
+            color: orange;
+        }
+
+        a:hover {
+            color: green;
+            text-decoration: underline;
+        }
+
+        li:first-child {
+            font-weight: bold;
+        }
+
+        input:focus {
+            border: 2px solid blue;
+        }
+
+        p::first-line {
+            font-weight: bold;
+            color: purple;
+        }
+
+        p::before {
+            content: "👉 ";
+        }
+
+        input[type="text"] {
+            background-color: #f0f8ff;
+        }
+
+        a[target="_blank"] {
+            color: teal;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="main-title">CSS Selector Examples</h1>
+
+    <p class="highlight">This paragraph uses class selector and pseudo-element.</p>
+
+    <div>
+        <p>This paragraph is inside a div.</p>
+        <ul>
+            <li>List Item 1</li>
+            <li>List Item 2</li>
+        </ul>
+    </div>
+
+    <h2>Adjacent Heading</h2>
+    <p>This paragraph is adjacent to h2.</p>
+
+    <h3>General Sibling Heading</h3>
+    <p>This paragraph follows h3.</p>
+    <p>Another paragraph after h3.</p>
+
+    <a href="https://example.com" target="_blank">External Link</a>
+    <br><br>
+
+    <input type="text" placeholder="Text input">
+    <input type="password" placeholder="Password input">
+    <br><br>
+
+    <a href="#">Hover over this link</a>
+
+</body>
+</html>
